@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Welcome to Django test project!</h1>
+<h2>Members</h2>
+<table border="2">
+	{% for x in members %}
+	<tr>
+		<td><a href="update/{{x.id}}">{{x.id}}</a></td>
+		<td>{{x.firstname}}</td>
+		<td>{{x.lastname}}</td>
+		<td><a href="delete/{{x.id}}">delete</a></td>
+	</tr>
+	{% endfor %}
+</table>
+
+<p><a href="add/">Add member</a></p>
+
+</body>
+</html>
